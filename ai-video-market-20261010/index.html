@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>AI 영상 템플릿 경쟁과 MoR</title>
+<title>AI 영상 템플릿 시장 진입</title>
 <style>
   :root {
     --paper: #f5f5f0; --surface: #ffffff; --ink: #1f2b27; --muted: #5d6a64;
@@ -155,248 +155,186 @@
     section { break-inside: avoid-page; }
   }
 </style>
+<style>
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+  .stat { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; }
+  .stat .big { display: block; font-size: 34px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.15;
+               color: var(--accent); font-variant-numeric: tabular-nums; }
+  .stat .big small { font-size: 16px; font-weight: 700; margin-left: 2px; }
+  .stat .lbl { display: block; font-size: 13.5px; color: var(--ink); font-weight: 700; margin-top: 4px; }
+  .stat .sub { display: block; font-size: 12.5px; color: var(--muted); margin-top: 2px; line-height: 1.5; }
+  .hi { color: var(--accent); font-weight: 800; }
+  .verdict { font-size: 19px; line-height: 1.7; font-weight: 700; margin: 0; max-width: none; }
+  .key { list-style: none; padding: 0; margin: 14px 0 0; }
+  .key li { position: relative; padding: 10px 0 10px 28px; border-bottom: 1px solid var(--rule); font-size: 15.5px; }
+  .key li:last-child { border-bottom: none; }
+  .key li::before { content: attr(data-n); position: absolute; left: 0; top: 10px; width: 20px; height: 20px;
+                    border-radius: 50%; background: var(--accent); color: var(--surface); font-size: 12px;
+                    font-weight: 800; text-align: center; line-height: 20px; }
+  .bars { margin-top: 16px; background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px 10px; }
+  .bar-row { display: grid; grid-template-columns: 76px 1fr 64px; align-items: center; gap: 10px; padding: 5px 0; font-size: 14px; }
+  .bar-row .name { font-weight: 700; }
+  .bar-track { height: 14px; background: var(--fill); border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--accent); border-radius: 0 4px 4px 0; }
+  .bar-row.dim .bar-fill { background: var(--soft); }
+  .bar-row .val { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); font-size: 13px; }
+  .bar-row:hover { background: var(--fill); }
+  .tier { display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 12px; font-weight: 800; white-space: nowrap; }
+  .tier.t1 { background: var(--accent); color: var(--surface); }
+  .tier.t2 { background: var(--accent-tint); color: var(--accent); border: 1px solid var(--accent); }
+  .tier.t3 { background: var(--fill); color: var(--muted); border: 1px solid var(--rule); }
+  .test { background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 8px; padding: 14px 16px; }
+  .test h3 { margin: 0 0 4px; font-size: 16px; }
+  .test .price { font-size: 22px; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .test p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+  @media (min-width: 680px) { .stats { grid-template-columns: repeat(4, 1fr); } .stats.three { grid-template-columns: repeat(3, 1fr); } }
+</style>
 </head>
 <body>
 <div class="page">
   <header>
-    <p class="eyebrow">AI Trend Studio · 경쟁·결제 조사 · 2026-10-10</p>
-    <h1>AI 영상 템플릿 경쟁 지형과 해외 MoR</h1>
-    <p class="subtitle">PixVerse·Shots처럼 사진 한 장으로 트렌드 영상을 만드는 서비스가 얼마나 있는지, 가격은 어떤지, 우리는 어디에 설 수 있는지, 해외 결제는 어떻게 받는지 정리했습니다.</p>
+    <p class="eyebrow">AI Trend Studio · 경쟁·국가·결제 · 2026-10-10</p>
+    <h1>AI 영상 템플릿 시장, 어디서 어떻게 들어갈까</h1>
+    <p class="subtitle">경쟁 서비스 수와 가격, 국가별 기회, 해외 결제(MoR)를 핵심만 정리했습니다.</p>
     <p>
       <span class="status"><span class="dot"></span>조사 결과</span>
-      <span class="status-meta">2026-10-10 기준 · 미확인·추정 표기 포함</span>
+      <span class="status-meta">24개국 App Store 차트 직접 수집 · 미확인 항목 별도 표시</span>
     </p>
-    <p class="lede">
-      고객이 고를 수 있는 대체재는 <strong>40곳 안팎</strong>이라 레드오션이 맞습니다. 사진 한 장 + 트렌드 템플릿 기능에 실사용자가 있는 앱이 약 30개, 템플릿 탭을 둔 대형 플랫폼이 10곳 안팎입니다.
-      하지만 <strong>웹 + 건당 결제 + 구독 없음 + 결과 보장</strong>이라는 우리 포지션 그대로인 곳은 찾지 못했습니다.
-      템플릿 자체는 API로 편당 $0.15~0.45에 누구나 살 수 있어서, 차별화는 템플릿이 아니라 <strong>과금 방식과 신뢰</strong>에서 나와야 합니다.
-      결제는 Dodo와 Polar 두 곳에 동시에 사전 문의하는 경로를 추천합니다.
-    </p>
+
+    <div class="stats">
+      <div class="stat"><span class="big">약 30<small>개</small></span><span class="lbl">실사용자가 있는 직접 경쟁 앱</span><span class="sub">+ 템플릿 탭을 둔 대형 플랫폼 약 10곳</span></div>
+      <div class="stat"><span class="big">7<small>개</small></span><span class="lbl">20개국 이상 매출 차트에 있는 앱</span><span class="sub">Shots, AI Catch, Dance AI 등. 시장은 소수가 나눠 가짐</span></div>
+      <div class="stat"><span class="big">$0.15<small>~0.45</small></span><span class="lbl">템플릿 영상 1편 원가</span><span class="sub">API로 누구나 같은 템플릿을 삼</span></div>
+      <div class="stat"><span class="big">0<small>곳</small></span><span class="lbl">우리와 같은 포지션</span><span class="sub">웹 + 건당 결제 + 구독 없음 + 결과 보장</span></div>
+    </div>
+
+    <p class="lede"><strong>레드오션은 맞지만, 빈자리가 있습니다.</strong> 경쟁사는 모두 <span class="hi">주간 구독 + 코인</span>으로 팔고, 사용자 불만도 거기에 몰립니다. 우리는 <span class="hi">한 번 결제, 실패하면 환급</span>으로 반대편에 섭니다. 첫 시장은 <span class="hi">필리핀·말레이시아</span>(한류 최상위, 광고비 최저, 영어로 충분, 현지 지갑 결제 가능)와 <span class="hi">미국·영국</span>(지불 의사 최상위)을 영어 페이지 하나로 동시에 시험합니다.</p>
+
     <p class="related">
       <span>관련 문서</span>
       <a href="../benchmark-20261010/">Flixx·Glovv 벤치마크</a>
       <a href="../venture-review-20261004/">재평가와 역할 분담</a>
       <a href="../">통합 브리프</a>
     </p>
-    <nav class="toc" aria-label="목차">
-      <ol>
-        <li><a href="#count">경쟁 서비스는 몇 개인가</a></li>
-        <li><a href="#players">주요 서비스와 가격</a></li>
-        <li><a href="#api">템플릿은 API로 산다</a></li>
-        <li><a href="#complaints">사용자 불만</a></li>
-        <li><a href="#edge">우리가 설 자리</a></li>
-        <li><a href="#dont">하지 말 것</a></li>
-        <li><a href="#mor">해외 MoR이란</a></li>
-        <li><a href="#mor-compare">MoR 업체 비교</a></li>
-        <li><a href="#steps">시작 절차</a></li>
-        <li><a href="#open">아직 모르는 것</a></li>
-      </ol>
-    </nav>
   </header>
 
-  <section id="count">
-    <h2><span class="no">01</span>경쟁 서비스는 몇 개인가</h2>
-    <p class="lead-note">처음 보고한 303개는 카테고리 전체를 넓게 센 숫자입니다. 같은 데이터를 우리 포지션 기준으로 좁혀 다시 셌습니다.</p>
+  <section id="competition">
+    <h2><span class="no">01</span>경쟁: 많지만 똑같이 판다</h2>
+    <ul class="key">
+      <li data-n="1"><strong>303개는 과장, 직접 경쟁은 <span class="hi">약 30개</span>입니다.</strong> 303개는 이름에 AI video·hug·kiss가 들어간 iOS 앱 전부입니다. 템플릿 중심이면서 평점 1,000개 이상인 앱만 세면 약 30개, 1만 개 이상은 <span class="hi">14개</span>입니다.</li>
+      <li data-n="2"><strong>PixVerse는 템플릿 공장입니다.</strong> 고유 템플릿 <span class="hi">1,054개</span>, 최근 90일에 <span class="hi">462개</span> 추가, 새 유행은 당일 등록. 기업 가치 $2B 이상. 속도와 개수로는 이길 수 없습니다.</li>
+      <li data-n="3"><strong>Shots 같은 앱은 남의 모델에 화면만 얹었습니다.</strong> 터키의 작은 개발사인데 PixVerse·Kling 모델을 써서 미국 사진·비디오 <span class="hi">2위</span>, 24개국 중 <span class="hi">24개국</span> 매출 차트에 있습니다. 작은 팀도 광고와 결제 화면만 잘하면 된다는 뜻입니다.</li>
+      <li data-n="4"><strong>가격은 거의 다 <span class="hi">주 $6.99~9.99</span> 구독 + 코인 추가 구매입니다.</strong> 실제 편당 가격은 Shots 기준 약 $4입니다.</li>
+    </ul>
+
     <div class="table-wrap">
       <table>
-        <thead><tr><th>범위</th><th>개수</th><th>기준</th></tr></thead>
+        <thead><tr><th>서비스</th><th>가격</th><th>편당</th></tr></thead>
         <tbody>
-          <tr><td>이름에 photo-to-video·hug·kiss·AI video가 들어간 iOS 앱</td><td class="num">303</td><td>카테고리 전체. 텍스트로 만드는 범용 생성기와 편집기 포함</td></tr>
-          <tr><td>그중 템플릿·트렌드 중심</td><td class="num">192</td><td>앱 설명이 template·trend·viral·effect 중심</td></tr>
-          <tr><td>그중 실사용자가 있는 앱</td><td class="num">약 30</td><td>미국 또는 한국 평점 1,000개 이상인 37개에서 클리핑·편집·AR 필터 앱 약 7개 제외</td></tr>
-          <tr><td>평점 1만 개 이상</td><td class="num">14</td><td>Pose, Momo, Toonapp, Revive, Shots, Hula, VideoMax, Flashloop 등</td></tr>
-          <tr><td>템플릿 탭을 둔 대형 플랫폼</td><td class="num">약 10</td><td>PixVerse, Higgsfield, Vidu, Hailuo, Kling, Pika, Viggle, CapCut, Gemini, 캐럿</td></tr>
-          <tr><td>우리와 같은 포지션</td><td class="num">0</td><td>웹 + 건당 결제 + 구독 없음 + 결과 보장. 실사용자가 있는 곳은 찾지 못함. 건당 판매 앱(Loopsie, Vigen, AI Mirror)은 모두 앱이고 $1.99부터</td></tr>
+          <tr><td>PixVerse Lite 앱</td><td>주 $5.99 · 연 $49.99 + 크레딧팩</td><td class="num">미확인</td></tr>
+          <tr><td>Shots 앱</td><td>주 $6.99~12.99 · 연 $39.99~79.99 + 코인</td><td class="num"><span class="hi">약 $4</span></td></tr>
+          <tr><td>PixVerse 웹</td><td>월 $10 / $30 / $60</td><td class="num">약 $0.30</td></tr>
+          <tr><td>Kling · Vidu · Viggle</td><td>월 $10 안팎</td><td class="num">$0.10~0.32</td></tr>
+          <tr><td>Higgsfield</td><td>월 $19부터</td><td class="num">$0.27~0.49</td></tr>
+          <tr><td>건당 판매 앱 (Loopsie, Vigen)</td><td>1편 $1.99~3.99</td><td class="num">$1.99~</td></tr>
+          <tr><td><strong>우리 초안</strong></td><td><strong>1편 $4.99, 구독 없음</strong></td><td class="num"><span class="hi">$4.99</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="figcap">iTunes Search API로 미국·한국 App Store를 5개 검색어(AI video template, AI hug, photo to video AI, AI kiss, AI video effects)로 수집해 분류했습니다. 안드로이드와 웹 전용 서비스는 개수에 넣지 않았습니다.</p>
-    <ul class="plain">
-      <li><strong>공급은 빠르게 늘고 있습니다.</strong><span class="sub">넓은 기준 303개 중 85%가 2024년 이후 출시됐고, 2026년에는 9개월 만에 107개가 나와 2025년 전체(89개)를 넘었습니다.</span></li>
-      <li><strong>비어 있는 자리는 기회일 수도, 수요가 없다는 신호일 수도 있습니다.</strong><span class="sub">어느 쪽인지는 이 데이터로 알 수 없고, 작은 유료 시험으로만 확인할 수 있습니다.</span></li>
-    </ul>
-  </section>
-
-  <section id="players">
-    <h2><span class="no">02</span>주요 서비스와 가격</h2>
-    <div class="cards two">
-      <div class="card"><span class="tag">PixVerse</span><h3>템플릿 공장</h3><p>웹 템플릿 고유 1,054개, 최근 90일에 462개 추가. 새 유행은 당일에 올라옵니다. 기업 가치 $2B 이상(2026-07 시리즈 C $439M), 연 매출 $40M 이상(2025-10 공개). 미국 Meta 광고 약 430개 운영 중입니다. PixVerse Lite는 같은 서비스를 새 싱가포르 법인(AIVORA) 명의로 다시 올린 iOS 앱입니다.</p></div>
-      <div class="card"><span class="tag">Shots</span><h3>남의 모델에 화면만 얹은 앱</h3><p>터키의 작은 개발사(DeePix AI)가 만들었습니다. 앱 설명에 PixVerse 효과, Kling, Seedance를 쓴다고 적혀 있습니다. 한국어를 지원하지 않는데도 미국 사진·비디오 부문 2위, 한국 19위입니다. PixVerse는 이런 앱의 경쟁자이자 공급자입니다.</p></div>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>서비스</th><th>무료</th><th>유료 가격</th><th>1편당 가격</th></tr></thead>
-        <tbody>
-          <tr><td>PixVerse 웹</td><td>가입 60 + 매일 30크레딧, 워터마크</td><td>월 $10 / $30 / $60 / $249, 크레딧팩 $5~$100</td><td class="num">약 $0.30 (추정)</td></tr>
-          <tr><td>PixVerse Lite 앱</td><td>일일 크레딧</td><td>주 $5.99, 연 $49.99 + 크레딧팩 (₩9,900 / ₩77,000)</td><td class="num">미확인</td></tr>
-          <tr><td>Shots 앱</td><td>없음, 결제 화면 먼저</td><td>주 $6.99~12.99, 연 $39.99/$79.99 + 코인팩</td><td class="num">약 $4 (리뷰 기반 추정)</td></tr>
-          <tr><td>Higgsfield</td><td>제한적</td><td>월 $19 / $47~59 / $99~129</td><td class="num">$0.27~0.49</td></tr>
-          <tr><td>Kling</td><td>일일 크레딧, 워터마크</td><td>월 $10 / $37 / $180</td><td class="num">$0.15~0.32</td></tr>
-          <tr><td>Vidu</td><td>워터마크, 무료 hug·kiss 페이지</td><td>월 $10 / $43</td><td class="num">약 $0.10</td></tr>
-          <tr><td>Viggle</td><td>하루 5편, 워터마크</td><td>월 $9.99 (핵심 기능 무제한)</td><td class="num">사실상 무제한</td></tr>
-          <tr><td>롱테일 앱 20여 개</td><td>대부분 없음</td><td>주 $2.49~17.99, 흔한 구간 $6.99~9.99 + 코인 (한국 주 ₩9,900~14,000)</td><td class="num">—</td></tr>
-          <tr><td>건당 판매 앱</td><td>—</td><td>Loopsie $1.99, Vigen 4초 $1.99 / 8초 $3.99, AI Mirror $1.99~9.99</td><td class="num">$1.99부터</td></tr>
-          <tr><td>캐럿 (한국)</td><td>—</td><td>300P ₩4,400, 1,400P ₩14,000, Plus ₩29,000</td><td class="num">미확인</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="figcap">공식 가격 페이지와 App Store 미국·한국 페이지를 2026-10-10에 로그아웃 상태로 확인했습니다. 첫 결제 할인이 섞여 있을 수 있습니다.</p>
-    <p class="note"><strong>규모 참고:</strong> Higgsfield는 외부 집계 기준 연 매출 $500M~700M, Kling은 2026년 3월 약 $500M입니다. OpenAI Sora 앱은 2026-04-26에 종료됐습니다. 대형 플랫폼은 무료 혜택을 줄이는 추세입니다(Pika 무료 월 크레딧 0).</p>
-  </section>
-
-  <section id="api">
-    <h2><span class="no">03</span>템플릿은 API로 산다</h2>
-    <p class="lead-note">유행 템플릿이 원자재가 됐습니다. 원가에는 좋은 소식이고, 차별화에는 나쁜 소식입니다.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>공급원</th><th>상품</th><th>편당 가격</th></tr></thead>
-        <tbody>
-          <tr><td>fal · PixVerse v5.5 Effects</td><td>템플릿 효과 46종 (Kiss Me AI, Muscle Surge 등)</td><td class="num">$0.15 (360p) ~ $0.40 (1080p)</td></tr>
-          <tr><td>WaveSpeed · PixVerse Effects</td><td>같은 효과</td><td class="num">$0.45부터</td></tr>
-          <tr><td>PixVerse API 직접</td><td>V6 720p 5초, 구형 Effects</td><td class="num">약 $0.20~0.30</td></tr>
-          <tr><td>Vidu 템플릿 API</td><td>hug·kiss 등</td><td class="num">$0.20~0.50 (제3자 목록)</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <ul class="plain">
-      <li><strong>원가:</strong><span class="sub">편당 $0.15~0.45라서 $4.99에 팔면 결제 수수료를 빼고 편당 약 $3.7~4.2가 남습니다. 무료 재생성을 2번까지 해 줘도 약 $2.8~3.9가 남습니다(추정, 광고비 제외).</span></li>
-      <li><strong>차별화:</strong><span class="sub">같은 템플릿을 같은 날 수십 개 앱이 붙일 수 있고, 대형 플랫폼은 유행을 며칠 만에 무료로 풀어 버립니다. 유행 하나의 정점은 2~6주입니다.</span></li>
-    </ul>
-  </section>
-
-  <section id="complaints">
-    <h2><span class="no">04</span>사용자 불만이 몰리는 곳</h2>
-    <p class="lead-note">PixVerse와 Shots, 롱테일 앱 리뷰에서 같은 불만이 반복됩니다.</p>
-    <ul class="plain">
-      <li><strong>이중 과금</strong><span class="sub">구독료를 냈는데 코인을 또 사야 함. "$9.99를 냈는데 영상 3개 만들고 막혔다."</span></li>
-      <li><strong>실패해도 차감</strong><span class="sub">생성 실패, 재시도, 검열 차단에도 크레딧이 빠짐. "열 번 돌리면 만족스러운 게 두세 개."</span></li>
-      <li><strong>환불·해지</strong><span class="sub">결과가 마음에 안 들어도 환불 불가, 해지 버튼을 찾기 어려움. PixVerse는 크레딧팩을 어떤 경우에도 환불하지 않는다고 명시합니다.</span></li>
-      <li><strong>광고와 다른 결과</strong><span class="sub">광고보다 짧거나, 얼굴이 본인과 닮지 않음.</span></li>
-      <li><strong>얼굴 사진의 사용</strong><span class="sub">PixVerse 약관은 사용자 콘텐츠를 모델 학습에 쓰는 영구 라이선스를 받습니다.</span></li>
-    </ul>
-    <p class="note"><strong>업계 수치:</strong> RevenueCat 2026 보고서(TechCrunch 보도 기준)에서 AI 앱은 유료 전환율이 높지만(8.5% vs 5.6%), 1년 유지율은 낮고(21.1% vs 30.7%) 환불률 중앙값은 4.2%입니다. 반복 습관보다 유행 한 번을 현금화하는 시장에 가깝습니다.</p>
+    <p class="figcap">공식 가격 페이지·App Store 미국 페이지, 2026-10-10 로그아웃 상태 기준. 웹 서비스의 편당 가격은 월 요금을 크레딧으로 나눈 추정치입니다.</p>
   </section>
 
   <section id="edge">
-    <h2><span class="no">05</span>우리가 설 자리</h2>
-    <p class="lead-note">더 싸게가 아니라 <strong>"돈 낸 만큼 확실히 받는다"</strong>를 팝니다.</p>
+    <h2><span class="no">02</span>우리가 설 자리</h2>
+    <p class="lead-note">리뷰 불만 1위는 "구독했는데 코인을 또 사야 함", 2위는 "실패해도 크레딧 차감"입니다. 이걸 뒤집습니다.</p>
     <div class="cards two">
-      <div class="card"><span class="tag">과금</span><h3>정직한 단건 가격</h3><p>$4.99, 한 번 결제, 자동 갱신 없음. Shots의 실질 편당 가격(약 $4)과 비슷하지만 구독이 없습니다. EPIK AI 졸업사진(2023)도 결과물 팩 단위 판매로 56개국 1위를 했습니다.</p></div>
-      <div class="card"><span class="tag">보장</span><h3>실패하면 자동 환급, 결제 전 미리보기</h3><p>저화질 미리보기를 먼저 보여주고, 마음에 들면 결제해 고화질로 받습니다. 차단·실패는 자동 환급하고 재생성 몇 번은 무료. 경쟁사는 크레딧 소진이 수익 모델이라 따라 하기 어렵습니다.</p></div>
-      <div class="card"><span class="tag">상황</span><h3>범용 유행 대신 상황별 페이지</h3><p>"AI hug" 같은 범용 검색어는 CapCut의 템플릿 페이지와 Vidu 무료 페이지가 차지했습니다. 옛날 사진 움직이기, 생일, 반려동물처럼 목적이 분명하고 감정이 실린 상황이 단건 구매와 맞습니다. 검색량은 미확인입니다.</p></div>
-      <div class="card"><span class="tag">한국</span><h3>한국식 비주얼 포맷</h3><p>움직이는 4컷 스트립, 포토부스 프레임 영상 같은 포맷입니다. 인생네컷은 미국 매장 약 10곳, 포토이즘은 27개국 진출을 발표했습니다. 이를 해외 대상으로 제품화한 한국 소규모 팀은 찾지 못했습니다.</p></div>
-      <div class="card"><span class="tag">결제</span><h3>웹 결제 + MoR</h3><p>앱스토어 수수료 30% 대신 12~17%. Glam AI가 결제를 웹으로 옮겨 수익성을 개선한 사례가 있습니다(결제 퍼널 업체 사례 연구).</p></div>
-      <div class="card"><span class="tag">신뢰</span><h3>얼굴 사진 즉시 삭제, 학습 미사용</h3><p>고객에게는 판매 포인트이고, MoR 심사에서는 "페이스스왑·딥페이크가 아니다"를 보여주는 자료입니다.</p></div>
+      <div class="card"><span class="tag">과금</span><h3>한 번 결제, 자동 갱신 없음</h3><p>편당 가격은 Shots와 비슷하지만 구독 덫이 없습니다. 3편 묶음을 두면 고정 수수료 부담도 줄어듭니다.</p></div>
+      <div class="card"><span class="tag">보장</span><h3>미리보기 후 결제, 실패하면 자동 환급</h3><p>원가가 편당 $0.45 이하라 무료 재생성 2번을 줘도 <strong>$2.8~3.9</strong>가 남습니다(추정, 광고비 제외).</p></div>
+      <div class="card"><span class="tag">포맷</span><h3>한국식 포맷과 상황별 템플릿</h3><p>움직이는 4컷 스트립, 친구 크리스마스, 졸업, 옛날 사진 움직이기. 범용 "AI hug"는 CapCut과 Vidu 무료 페이지가 차지했습니다.</p></div>
+      <div class="card"><span class="tag">신뢰</span><h3>얼굴 사진 즉시 삭제, 학습 미사용</h3><p>PixVerse 약관은 사용자 콘텐츠를 학습용 영구 라이선스로 받습니다. 반대로 가면 판매 포인트이자 결제사 심사 자료가 됩니다.</p></div>
     </div>
-    <p class="note"><strong>반대 논리:</strong> 웹 전용은 앱스토어 차트를 타고 퍼지는 경로를 포기합니다. EPIK, ToonMe가 커진 길이 그 차트였습니다. 1~3명 팀이 단일 템플릿 앱으로 차트 상위에 오른 확인된 사례는 찾지 못했습니다.</p>
   </section>
 
-  <section id="dont">
-    <h2><span class="no">06</span>하지 말 것</h2>
-    <ul class="plain">
-      <li><strong>주간 자동 갱신 구독, 구독 위에 코인을 또 파는 이중 과금</strong><span class="sub">경쟁사 1점 리뷰의 원인이고, 웹 MoR에서는 카드 분쟁과 계정 동결로 돌아옵니다.</span></li>
-      <li><strong>템플릿 수나 속도로 PixVerse와 정면 승부</strong></li>
-      <li><strong>페이스스왑, 유명인·아이돌 얼굴, 캐릭터 IP 템플릿</strong><span class="sub">마케팅에 "face swap", "deepfake", "uncensored"를 쓰는 것도 MoR 금지 조항에 걸립니다.</span></li>
-      <li><strong>Gumroad·Creem에 얼굴 애니메이션 상품으로 신청</strong></li>
-      <li><strong>Lemon Squeezy 한 곳에만 의존</strong></li>
-      <li><strong>고인을 "되살린다"는 마케팅, 업로드 사진 장기 보관</strong></li>
-    </ul>
+  <section id="countries">
+    <h2><span class="no">03</span>국가별 기회</h2>
+    <p class="lead-note">세 가지를 겹쳐 봤습니다. 경쟁 앱이 현지 언어를 얼마나 지원하는지, 한류·한국 포맷 친화도, 그리고 결제 수단이 실제로 붙는지.</p>
+
+    <h3 class="sub">경쟁 앱이 현지 언어를 지원하지 않는 비율</h3>
+    <p style="margin:0;font-size:14px;color:var(--muted)">각 나라 사진·비디오 매출 상위 100위 안의 AI 영상 템플릿 앱 중 그 나라 언어를 지원하지 않는 앱의 비율. 높을수록 현지화로 이길 틈이 큽니다.</p>
+    <div class="bars" role="img" aria-label="국가별 현지어 미지원 경쟁 앱 비율 막대 그래프">
+      <div class="bar-row" title="베트남: 10개 중 8개 미지원"><span class="name">베트남</span><span class="bar-track"><span class="bar-fill" style="width:80%;display:block"></span></span><span class="val">8/10 · 80%</span></div>
+      <div class="bar-row" title="태국: 11개 중 8개 미지원"><span class="name">태국</span><span class="bar-track"><span class="bar-fill" style="width:73%;display:block"></span></span><span class="val">8/11 · 73%</span></div>
+      <div class="bar-row" title="UAE: 15개 중 11개 미지원"><span class="name">UAE</span><span class="bar-track"><span class="bar-fill" style="width:73%;display:block"></span></span><span class="val">11/15 · 73%</span></div>
+      <div class="bar-row" title="인도네시아: 12개 중 8개 미지원"><span class="name">인도네시아</span><span class="bar-track"><span class="bar-fill" style="width:67%;display:block"></span></span><span class="val">8/12 · 67%</span></div>
+      <div class="bar-row" title="사우디: 16개 중 9개 미지원"><span class="name">사우디</span><span class="bar-track"><span class="bar-fill" style="width:56%;display:block"></span></span><span class="val">9/16 · 56%</span></div>
+      <div class="bar-row" title="멕시코: 15개 중 8개 미지원"><span class="name">멕시코</span><span class="bar-track"><span class="bar-fill" style="width:53%;display:block"></span></span><span class="val">8/15 · 53%</span></div>
+      <div class="bar-row" title="튀르키예: 16개 중 8개 미지원"><span class="name">튀르키예</span><span class="bar-track"><span class="bar-fill" style="width:50%;display:block"></span></span><span class="val">8/16 · 50%</span></div>
+      <div class="bar-row" title="일본: 13개 중 5개 미지원"><span class="name">일본</span><span class="bar-track"><span class="bar-fill" style="width:38%;display:block"></span></span><span class="val">5/13 · 38%</span></div>
+      <div class="bar-row" title="독일: 12개 중 4개 미지원"><span class="name">독일</span><span class="bar-track"><span class="bar-fill" style="width:33%;display:block"></span></span><span class="val">4/12 · 33%</span></div>
+      <div class="bar-row" title="대만: 13개 중 4개 미지원"><span class="name">대만</span><span class="bar-track"><span class="bar-fill" style="width:31%;display:block"></span></span><span class="val">4/13 · 31%</span></div>
+      <div class="bar-row" title="브라질: 14개 중 3개 미지원"><span class="name">브라질</span><span class="bar-track"><span class="bar-fill" style="width:21%;display:block"></span></span><span class="val">3/14 · 21%</span></div>
+    </div>
+    <p class="figcap">2026-10-10 Apple App Store 사진 및 비디오 최고 매출 100위(24개국)를 수집해 앱 이름으로 AI 영상 템플릿 앱을 분류하고, 각 앱의 지원 언어 목록과 대조했습니다. 영어권 국가는 제외했습니다.</p>
+
+    <p class="note"><strong>함정:</strong> 언어 공백이 가장 큰 <strong>베트남·태국·인도네시아</strong>는 현지 결제(MoMo, PromptPay, QRIS·GoPay)를 Dodo도 Polar도 지원하지 않고, 신용카드 보유율이 6~14%입니다. 기회는 보이지만 지금은 돈을 받을 방법이 없습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>국가</th><th>판정</th><th>왜</th><th>결제</th></tr></thead>
+        <tbody>
+          <tr><td>필리핀</td><td><span class="tier t1">1순위</span></td><td>한류 호감도 <span class="hi">87%</span>·인기 체감·소비시간 모두 <span class="hi">1위</span>. TikTok CPM <span class="hi">$0.6~1.8</span>로 최저. 영어로 충분. 무료 차트 100위 안 경쟁 앱 <span class="hi">3개</span>뿐</td><td>Dodo GCash</td></tr>
+          <tr><td>말레이시아</td><td><span class="tier t1">1순위</span></td><td>한류 호감도 77%, 영어 능숙도 아시아 <span class="hi">1위</span>, 직불카드 보유 80%. 포토이즘·포토그레이 진출</td><td>Dodo Touch 'n Go</td></tr>
+          <tr><td>미국</td><td><span class="tier t1">1순위</span></td><td>한류 월 지출 <span class="hi">$33</span>, 옛날 사진 움직이기·EPIK 졸업사진 1위 시장. 대신 광고비 최고(Meta CPM $16~23), 일리노이·텍사스 얼굴정보 소송 위험</td><td>카드, Apple·Google Pay</td></tr>
+          <tr><td>영국</td><td><span class="tier t1">1순위</span></td><td>한류 호감도 증가폭 <span class="hi">1위(+8%p)</span>, 월 지출 $29. 미국 페이지 그대로 재사용</td><td>카드, Revolut Pay</td></tr>
+          <tr><td>일본</td><td><span class="tier t2">2순위</span></td><td>온라인 결제의 <span class="hi">58%가 신용카드</span>. 무료 차트 경쟁 앱 <span class="hi">3개</span>로 부자 나라 중 가장 덜 붐빔. 한국식 포토부스 붐. 단 일본어 페이지 필수</td><td>카드 (PayPay 미지원)</td></tr>
+          <tr><td>인도</td><td><span class="tier t2">2순위</span></td><td>한류 호감도 84%, EPIK 최대 시장. 하지만 사용자당 수익이 북미의 1/5. 확산 시험장으로</td><td>UPI (Dodo·Polar)</td></tr>
+          <tr><td>브라질</td><td><span class="tier t2">2순위</span></td><td>옛날 사진 움직이기 1위 시장(2021). 포르투갈어 필수, 경쟁 앱 대부분 현지화됨</td><td>Dodo Pix</td></tr>
+          <tr><td>베트남·태국·인니</td><td><span class="tier t3">보류</span></td><td>언어 공백 최대, 한류·TikTok 최상위. 결제 수단이 붙으면 1순위로 올라감</td><td>현지 지갑 미지원</td></tr>
+          <tr><td>튀르키예·중동</td><td><span class="tier t3">보류</span></td><td>Shots(터키 개발사)가 매출 6~10위로 강함. UAE는 한류 지출 1위지만 시장 작음</td><td>카드</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="figcap">한류 수치: KOFICE 2026 해외한류실태조사. 광고비: 업체 추정치(Stackmatix·Lebesgue 등). 결제: Worldpay 2026, Dodo·Polar 문서. 경쟁 앱 수: 위 차트 수집.</p>
+
+    <h3 class="sub">첫 시험 제안 (영어 페이지 하나로 2주)</h3>
+    <div class="cards three">
+      <div class="test"><h3>필리핀</h3><span class="price">₱149</span><p>1편, 3편 ₱249 · K-포토부스 4컷 "친구 크리스마스" · TikTok · GCash 노출 여부를 나눠 비교</p></div>
+      <div class="test"><h3>말레이시아·싱가포르</h3><span class="price">RM12.90</span><p>1편, 3편 RM19.90 · 4컷 졸업·연말 · TikTok·Reels</p></div>
+      <div class="test"><h3>미국·영국</h3><span class="price">$3.99</span><p>1편, 3편 $6.99 · 옛날 가족사진 움직이기(연말) · Reels·TikTok 자연 게시 + 소액 광고</p></div>
+    </div>
   </section>
 
   <section id="mor">
-    <h2><span class="no">07</span>해외 MoR이란</h2>
-    <p>MoR(Merchant of Record)은 <strong>고객에게 법적 판매자로 나서는 결제 대행사</strong>입니다. 고객은 MoR에게서 사고, MoR은 수수료를 뗀 정산금을 우리에게 줍니다. 우리 입장에서는 해외 고객 수천 명이 아니라 외국 회사 한 곳에 파는 구조가 됩니다.</p>
-    <div class="cards two">
-      <div class="card">
-        <p class="col-title">MoR이 맡는 것</p>
-        <ul class="plain">
-          <li><strong>나라별 부가세·판매세 계산과 납부</strong><span class="sub">우리가 각국에 세금 등록을 하지 않아도 됩니다.</span></li>
-          <li><strong>사기 결제, 카드 분쟁, 환불 처리</strong></li>
-          <li><strong>영수증 발행과 거래 단위 고객 응대</strong><span class="sub">카드 명세서에는 MoR 이름이 앞에 찍힙니다. 예: PADDLE.NET* 브랜드</span></li>
-        </ul>
-      </div>
-      <div class="card">
-        <p class="col-title">우리에게 남는 것</p>
-        <ul class="plain">
-          <li><strong>한국 사업자등록과 세금 신고</strong></li>
-          <li><strong>상품 자체의 적법성</strong><span class="sub">본인 사진 동의, 초상권, 콘텐츠 검열</span></li>
-          <li><strong>계정이 막힐 위험</strong><span class="sub">MoR은 승인 뒤에도 계정을 막을 수 있습니다. 얼굴을 다루는 AI 상품에서는 이것이 가장 큰 운영 위험입니다.</span></li>
-        </ul>
-      </div>
+    <h2><span class="no">04</span>결제: 해외 MoR</h2>
+    <p class="lead-note">MoR은 고객에게 대신 판매자가 되어 나라별 세금·환불·카드 분쟁을 처리해 주는 결제 대행사입니다. 카드 명세서에는 MoR 이름이 찍힙니다.</p>
+    <div class="stats three">
+      <div class="stat"><span class="big">13.5<small>%</small></span><span class="lbl">Dodo · 1순위</span><span class="sub">$4.99 1건 수수료. 한국 정산 명시, GCash·Touch 'n Go·Pix·UPI 지원</span></div>
+      <div class="stat"><span class="big">16.5<small>%</small></span><span class="lbl">Polar · 병행</span><span class="sub">AI 생성은 심사 대상. 동남아 현지 결제 없음. 한국 개인 가입 미확인</span></div>
+      <div class="stat"><span class="big">30<small>%</small></span><span class="lbl">앱스토어 비교</span><span class="sub">웹 + MoR이면 수수료가 절반 이하</span></div>
     </div>
-  </section>
-
-  <section id="mor-compare">
-    <h2><span class="no">08</span>MoR 업체 비교</h2>
-    <p class="lead-note">결정적인 변수는 수수료가 아니라 얼굴·AI 생성 정책입니다.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>MoR</th><th>기본 수수료</th><th>$4.99 1건</th><th>한국 정산</th><th>얼굴·AI 정책</th><th>판정</th></tr></thead>
-        <tbody>
-          <tr><td>Dodo Payments</td><td>4% + 40¢, 국제 카드 +1.5%</td><td class="num">약 $0.67 (13.5%)</td><td>한국 신분증으로 가입·정산 명시</td><td>AI 생성은 심사 대상, 사칭·딥페이크 금지</td><td><span class="pill fixed">1순위</span></td></tr>
-          <tr><td>Polar</td><td>5% + 50¢, 비미국 카드 +1.5%</td><td class="num">약 $0.82 (16.5%)</td><td>정산 국가에 한국 포함, 개인 가입 가능 여부 미확인</td><td>AI 생성은 심사 대상, 페이스스왑·딥페이크 금지</td><td><span class="pill fixed">1순위 병행</span></td></tr>
-          <tr><td>Lemon Squeezy</td><td>5% + 50¢, 미국 외 +1.5%</td><td class="num">약 $0.82 + 정산 1%</td><td>한국 은행 정산 명시, 13일 보류, 최소 $50</td><td>AI·얼굴 관련 금지 문구 없음</td><td><span class="pill test">지금은 가능</span></td></tr>
-          <tr><td>Paddle</td><td>5% + 50¢, $10 미만 상품은 별도 협의</td><td class="num">약 $0.75 (15%)</td><td>달러 송금 또는 Payoneer, 최소 $100</td><td>사람 얼굴(애니메이션 포함)이 제한 품목</td><td><span class="pill test">백업</span></td></tr>
-          <tr><td>Creem</td><td>3.9% + 40¢</td><td class="num">약 $0.60 (11.9%)</td><td>목록 포함 (원문 미확인)</td><td>"face-manipulation tools of any kind" 금지</td><td><span class="pill test">위험</span></td></tr>
-          <tr><td>Gumroad</td><td>10% + 50¢ + 카드 수수료</td><td class="num">약 $1.44 (28.9%)</td><td>원화 정산</td><td>외부에서 이행하는 AI 생성 서비스 금지</td><td><span class="pill test">탈락</span></td></tr>
-          <tr><td>Stripe Managed Payments</td><td>3.5% + Stripe 기본 수수료</td><td class="num">—</td><td>한국 판매자 미지원</td><td>AI 제한 없음</td><td><span class="pill test">불가</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="figcap">각 업체 공식 문서 기준(2026-10). "$4.99 1건"은 해외 카드 추가 수수료까지 넣은 단순 계산이며 정산·환전 수수료는 빠져 있습니다.</p>
-    <ul class="plain">
-      <li><strong>Lemon Squeezy는 출구가 막혀 있습니다.</strong><span class="sub">Stripe가 인수한 뒤 사용자를 Stripe Managed Payments로 옮기겠다고 공식 블로그에 밝혔는데, Managed Payments는 한국 판매자를 받지 않습니다. 신규 가입이 아직 열려 있는지도 미확인입니다.</span></li>
-      <li><strong>$4.99 단건에서는 고정 수수료가 매출의 8~10%를 먹습니다.</strong><span class="sub">"3편 묶음 $9.99" 같은 묶음 상품을 두면 비중이 줄어듭니다.</span></li>
-      <li><strong>얼굴 사진 애니메이션이 승인·거절된 직접 사례는 찾지 못했습니다.</strong><span class="sub">간접 사례로 Paddle이 "식별 가능한 개인의 합성 미디어" 기능을 빼야 승인하겠다고 한 경우가 있습니다(경쟁 MoR 블로그 경유). 그래서 두 곳에 동시에 문의하고 답변을 기록으로 남깁니다.</span></li>
-    </ul>
-    <h3 class="sub">신청 전에 갖출 것</h3>
-    <ul class="plain">
-      <li>이용 정책에 성인물·타인 얼굴·미성년자 단독 사진·유명인 금지 명시</li>
-      <li>업로드 화면에 "본인이거나 동의를 받았음" 체크</li>
-      <li>입력 사진과 결과 영상 자동 검열</li>
-      <li>가격·환불 정책 페이지 공개</li>
-      <li>마케팅 문구에서 face swap·deepfake 같은 표현 배제</li>
+    <ul class="key">
+      <li data-n="!"><strong>업체 선택은 수수료보다 <span class="hi">얼굴 사진 정책</span>이 먼저입니다.</strong> Paddle은 사람 얼굴(애니메이션 포함)이 제한 품목, Creem은 "얼굴 조작 일체" 금지, Gumroad는 외부 AI 생성 서비스 금지입니다.</li>
+      <li data-n="!"><strong>Lemon Squeezy는 지금은 되지만 출구가 막혀 있습니다.</strong> Stripe Managed Payments로 옮겨가는 중인데, 그쪽은 <span class="hi">한국 판매자를 받지 않습니다</span>.</li>
+      <li data-n="!"><strong>얼굴 사진 애니메이션이 승인된 직접 사례는 아직 없습니다.</strong> Dodo와 Polar에 동시에 문의하고 답변을 기록으로 남깁니다.</li>
+      <li data-n="!"><strong>한국 쪽 준비는 <span class="hi">1~2주, 거의 0원</span>.</strong> 과세(간이) 사업자등록과 달러 외화통장이면 됩니다. 첫 정산까지는 2~4주.</li>
     </ul>
   </section>
 
-  <section id="steps">
-    <h2><span class="no">09</span>시작 절차</h2>
-    <p class="lead-note">한국 쪽 절차는 1~2주, 비용은 거의 0원입니다. 실제 병목은 MoR 심사와 첫 정산까지의 2~4주입니다.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>단계</th><th>할 일</th><th>기간</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td>홈택스 사업자등록. 면세가 아닌 과세(간이과세) 사업자로, 업종코드 722000(응용 소프트웨어) 또는 921505(미디어콘텐츠창작)</td><td>신청 후 2일 이내</td></tr>
-          <tr><td>2</td><td>은행 달러 외화예금 개설 후 MoR 정산 계좌로 등록</td><td>당일~수일</td></tr>
-          <tr><td>3</td><td>이용 정책·약관·환불·가격 페이지를 갖춘 뒤 Dodo·Polar 사전 문의와 신청</td><td>Dodo 1~3 영업일, 나머지 미확인</td></tr>
-          <tr><td>4</td><td>첫 판매 → 보류 → 정산 → 입금</td><td>약 2~4주</td></tr>
-          <tr><td>5</td><td>반기 부가세 신고 (영세율 + 외화입금증명서)</td><td>반기마다</td></tr>
-          <tr><td>6</td><td>5월 종합소득세 신고</td><td>연 1회</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <ul class="plain">
-      <li><strong>부가세 0%(영세율)는 법령 문언상 적용 가능성이 높습니다.</strong><span class="sub">시행령 제33조는 국내 사업장이 없는 외국 법인에 공급하는 소프트웨어·영상 제작을 영세율로 열거합니다. 다만 Lemon Squeezy·Paddle 같은 MoR 정산금을 명시한 국세청 해석은 찾지 못했습니다. 첫 신고 전에 세무사나 국세상담센터(126)에 확인하세요.</span></li>
-      <li><strong>정산은 한국 은행 달러 통장으로 직접 받습니다.</strong><span class="sub">시행규칙 제22조가 외국환은행을 통해 직접 송금받아 외화예금에 넣은 경우를 인정합니다. Payoneer·Wise를 거치거나 원화로 자동 환전되면 증빙이 약해질 수 있습니다(추정).</span></li>
-      <li><strong>세율이 0%여도 신고는 해야 합니다.</strong><span class="sub">빠뜨리면 가산세 위험이 있습니다.</span></li>
-    </ul>
-  </section>
-
-  <section id="open">
-    <h2><span class="no">10</span>아직 모르는 것</h2>
+  <section id="next">
+    <h2><span class="no">05</span>다음에 할 일</h2>
     <div class="action-box">
       <ol>
-        <li><strong>MoR이 "본인 사진 잔잔한 애니메이션"을 승인하는가</strong><span class="sub">Dodo·Polar 사전 문의로만 확인됩니다.</span></li>
-        <li><strong>상황별 검색어에 수요가 있는가</strong><span class="sub">키워드 도구로 검색량 확인이 필요합니다.</span></li>
-        <li><strong>웹 단건 결제 전환율이 앱 결제 화면보다 얼마나 나오는가</strong><span class="sub">작은 광고 시험으로만 알 수 있습니다. 이 카테고리의 광고 단가는 공개 자료가 없습니다.</span></li>
-        <li><strong>MoR 정산금의 영세율 해석</strong><span class="sub">첫 신고 전 세무 확인.</span></li>
+        <li><strong>Dodo·Polar에 실제 샘플로 사전 문의</strong><span class="sub">"본인 사진 잔잔한 애니메이션"이 승인되는지가 모든 것의 전제입니다.</span></li>
+        <li><strong>4컷 포맷·옛날 사진 템플릿 결과 영상 3~5개 제작</strong><span class="sub">원가와 실패율을 같이 기록합니다.</span></li>
+        <li><strong>영어 페이지 하나로 필리핀·말레이시아·미국·영국 2주 시험</strong><span class="sub">나라별 UTM과 가격 표시로 결제 시작률과 완료율을 나눠 봅니다.</span></li>
+        <li><strong>결과를 보고 일본(일본어 페이지)과 인도 진입 결정</strong></li>
       </ol>
     </div>
   </section>
 
   <footer>
-    AI Trend Studio · 경쟁·결제 조사 · 2026-10-10<br>
-    공식 가격·정책 페이지, App Store·Google Play, iTunes Search API, Meta 광고 라이브러리, 언론·업계 보고서를 2026-10-10에 확인했습니다. 매출·사용자 수는 회사 발표나 외부 추정입니다. 세무 내용은 법령 원문과 실무 해설을 정리한 것이며 세무 자문이 아닙니다.<br>
+    AI Trend Studio · 경쟁·국가·결제 · 2026-10-10<br>
+    App Store 차트·지원 언어는 Apple RSS와 iTunes Lookup API로 24개국을 직접 수집했습니다. 매출·사용자 수는 회사 발표나 외부 추정, 광고비는 업체 추정치입니다. 세무 내용은 자문이 아닙니다.<br>
     공개 공유판 · 링크를 가진 사람은 누구나 열람할 수 있습니다. 검색 제외 요청은 접근 통제가 아닙니다.
   </footer>
 </div>
